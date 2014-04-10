@@ -11,7 +11,7 @@
 		A3A05F4D18F710DD00B3091F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4C18F710DD00B3091F /* CoreGraphics.framework */; };
 		A3A05F4F18F710DD00B3091F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4E18F710DD00B3091F /* UIKit.framework */; };
 		A3A05F5518F710DD00B3091F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F5318F710DD00B3091F /* InfoPlist.strings */; };
-		A3A05F5718F710DD00B3091F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F5618F710DD00B3091F /* main.m */; };
+		A3A05F5718F710DD00B3091F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F5618F710DD00B3091F /* main.mm */; };
 		A3A05F5B18F710DD00B3091F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F5A18F710DD00B3091F /* AppDelegate.m */; };
 		A3A05F5E18F710DD00B3091F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F5C18F710DD00B3091F /* Main.storyboard */; };
 		A3A05F6118F710DD00B3091F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F6018F710DD00B3091F /* ViewController.m */; };
@@ -21,6 +21,30 @@
 		A3A05F6C18F710DD00B3091F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4E18F710DD00B3091F /* UIKit.framework */; };
 		A3A05F7418F710DD00B3091F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F7218F710DD00B3091F /* InfoPlist.strings */; };
 		A3A05F7618F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F7518F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m */; };
+		A3A05F8018F7116700B3091F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */; };
+		A3A05F8218F7116E00B3091F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8118F7116E00B3091F /* Accelerate.framework */; };
+		A3A05F8418F7119A00B3091F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8318F7119A00B3091F /* QuartzCore.framework */; };
+		A3A05F8618F711AD00B3091F /* DeepBelief.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8518F711AD00B3091F /* DeepBelief.framework */; };
+		A3A05F9D18F712A200B3091F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F8918F712A200B3091F /* CustomButton.m */; };
+		A3A05F9E18F712A200B3091F /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8A18F712A200B3091F /* Icon-29.png */; };
+		A3A05F9F18F712A200B3091F /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8B18F712A200B3091F /* Icon-40.png */; };
+		A3A05FA018F712A200B3091F /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8C18F712A200B3091F /* Icon-57.png */; };
+		A3A05FA118F712A200B3091F /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8D18F712A200B3091F /* Icon-58.png */; };
+		A3A05FA218F712A200B3091F /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8E18F712A200B3091F /* Icon-76.png */; };
+		A3A05FA318F712A200B3091F /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8F18F712A200B3091F /* Icon-80.png */; };
+		A3A05FA418F712A200B3091F /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9018F712A200B3091F /* Icon-114.png */; };
+		A3A05FA518F712A200B3091F /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9118F712A200B3091F /* Icon-120.png */; };
+		A3A05FA618F712A200B3091F /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9218F712A200B3091F /* Icon-152.png */; };
+		A3A05FA718F712A200B3091F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9318F712A200B3091F /* iTunesArtwork.png */; };
+		A3A05FA818F712A200B3091F /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */; };
+		A3A05FA918F712A200B3091F /* jetpac.ntwk in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9518F712A200B3091F /* jetpac.ntwk */; };
+		A3A05FAA18F712A200B3091F /* launch@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9618F712A200B3091F /* launch@1x.png */; };
+		A3A05FAB18F712A200B3091F /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9718F712A200B3091F /* launch@2x.png */; };
+		A3A05FAC18F712A200B3091F /* Nav_Share_Saved@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */; };
+		A3A05FAD18F712A200B3091F /* Nav_Share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9918F712A200B3091F /* Nav_Share@2x.png */; };
+		A3A05FAE18F712A200B3091F /* squarePNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9A18F712A200B3091F /* squarePNG.png */; };
+		A3A05FAF18F712A200B3091F /* stillBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9B18F712A200B3091F /* stillBtn.png */; };
+		A3A05FB018F712A200B3091F /* videoBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9C18F712A200B3091F /* videoBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +64,7 @@
 		A3A05F4E18F710DD00B3091F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3A05F5218F710DD00B3091F /* Jetpac Deep Belief Learner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jetpac Deep Belief Learner-Info.plist"; sourceTree = "<group>"; };
 		A3A05F5418F710DD00B3091F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A3A05F5618F710DD00B3091F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3A05F5618F710DD00B3091F /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		A3A05F5818F710DD00B3091F /* Jetpac Deep Belief Learner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jetpac Deep Belief Learner-Prefix.pch"; sourceTree = "<group>"; };
 		A3A05F5918F710DD00B3091F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A3A05F5A18F710DD00B3091F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +77,31 @@
 		A3A05F7118F710DD00B3091F /* Jetpac Deep Belief LearnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jetpac Deep Belief LearnerTests-Info.plist"; sourceTree = "<group>"; };
 		A3A05F7318F710DD00B3091F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3A05F7518F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jetpac_Deep_Belief_LearnerTests.m; sourceTree = "<group>"; };
+		A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A3A05F8118F7116E00B3091F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A3A05F8318F7119A00B3091F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3A05F8518F711AD00B3091F /* DeepBelief.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeepBelief.framework; path = ../DeepBeliefSDK/DeepBelief.framework; sourceTree = "<group>"; };
+		A3A05F8818F712A200B3091F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		A3A05F8918F712A200B3091F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		A3A05F8A18F712A200B3091F /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
+		A3A05F8B18F712A200B3091F /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		A3A05F8C18F712A200B3091F /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		A3A05F8D18F712A200B3091F /* Icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58.png"; sourceTree = "<group>"; };
+		A3A05F8E18F712A200B3091F /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		A3A05F8F18F712A200B3091F /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
+		A3A05F9018F712A200B3091F /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		A3A05F9118F712A200B3091F /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		A3A05F9218F712A200B3091F /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = "<group>"; };
+		A3A05F9318F712A200B3091F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		A3A05F9518F712A200B3091F /* jetpac.ntwk */ = {isa = PBXFileReference; lastKnownFileType = file; path = jetpac.ntwk; sourceTree = "<group>"; };
+		A3A05F9618F712A200B3091F /* launch@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@1x.png"; sourceTree = "<group>"; };
+		A3A05F9718F712A200B3091F /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@2x.png"; sourceTree = "<group>"; };
+		A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_Share_Saved@2x.png"; sourceTree = "<group>"; };
+		A3A05F9918F712A200B3091F /* Nav_Share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_Share@2x.png"; sourceTree = "<group>"; };
+		A3A05F9A18F712A200B3091F /* squarePNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarePNG.png; sourceTree = "<group>"; };
+		A3A05F9B18F712A200B3091F /* stillBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stillBtn.png; sourceTree = "<group>"; };
+		A3A05F9C18F712A200B3091F /* videoBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +109,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A05F8218F7116E00B3091F /* Accelerate.framework in Frameworks */,
+				A3A05F8018F7116700B3091F /* AssetsLibrary.framework in Frameworks */,
 				A3A05F4D18F710DD00B3091F /* CoreGraphics.framework in Frameworks */,
-				A3A05F4F18F710DD00B3091F /* UIKit.framework in Frameworks */,
+				A3A05F8618F711AD00B3091F /* DeepBelief.framework in Frameworks */,
 				A3A05F4B18F710DD00B3091F /* Foundation.framework in Frameworks */,
+				A3A05F8418F7119A00B3091F /* QuartzCore.framework in Frameworks */,
+				A3A05F4F18F710DD00B3091F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +154,10 @@
 		A3A05F4918F710DD00B3091F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3A05F8518F711AD00B3091F /* DeepBelief.framework */,
+				A3A05F8318F7119A00B3091F /* QuartzCore.framework */,
+				A3A05F8118F7116E00B3091F /* Accelerate.framework */,
+				A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */,
 				A3A05F4A18F710DD00B3091F /* Foundation.framework */,
 				A3A05F4C18F710DD00B3091F /* CoreGraphics.framework */,
 				A3A05F4E18F710DD00B3091F /* UIKit.framework */,
@@ -112,9 +169,11 @@
 		A3A05F5018F710DD00B3091F /* Jetpac Deep Belief Learner */ = {
 			isa = PBXGroup;
 			children = (
+				A3A05F8718F7120200B3091F /* en.lproj */,
 				A3A05F5918F710DD00B3091F /* AppDelegate.h */,
 				A3A05F5A18F710DD00B3091F /* AppDelegate.m */,
-				A3A05F5C18F710DD00B3091F /* Main.storyboard */,
+				A3A05F8818F712A200B3091F /* CustomButton.h */,
+				A3A05F8918F712A200B3091F /* CustomButton.m */,
 				A3A05F5F18F710DD00B3091F /* ViewController.h */,
 				A3A05F6018F710DD00B3091F /* ViewController.m */,
 				A3A05F6218F710DD00B3091F /* Images.xcassets */,
@@ -126,9 +185,28 @@
 		A3A05F5118F710DD00B3091F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3A05F8A18F712A200B3091F /* Icon-29.png */,
+				A3A05F8B18F712A200B3091F /* Icon-40.png */,
+				A3A05F8C18F712A200B3091F /* Icon-57.png */,
+				A3A05F8D18F712A200B3091F /* Icon-58.png */,
+				A3A05F8E18F712A200B3091F /* Icon-76.png */,
+				A3A05F8F18F712A200B3091F /* Icon-80.png */,
+				A3A05F9018F712A200B3091F /* Icon-114.png */,
+				A3A05F9118F712A200B3091F /* Icon-120.png */,
+				A3A05F9218F712A200B3091F /* Icon-152.png */,
+				A3A05F9318F712A200B3091F /* iTunesArtwork.png */,
+				A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */,
+				A3A05F9518F712A200B3091F /* jetpac.ntwk */,
+				A3A05F9618F712A200B3091F /* launch@1x.png */,
+				A3A05F9718F712A200B3091F /* launch@2x.png */,
+				A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */,
+				A3A05F9918F712A200B3091F /* Nav_Share@2x.png */,
+				A3A05F9A18F712A200B3091F /* squarePNG.png */,
+				A3A05F9B18F712A200B3091F /* stillBtn.png */,
+				A3A05F9C18F712A200B3091F /* videoBtn.png */,
 				A3A05F5218F710DD00B3091F /* Jetpac Deep Belief Learner-Info.plist */,
 				A3A05F5318F710DD00B3091F /* InfoPlist.strings */,
-				A3A05F5618F710DD00B3091F /* main.m */,
+				A3A05F5618F710DD00B3091F /* main.mm */,
 				A3A05F5818F710DD00B3091F /* Jetpac Deep Belief Learner-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -150,6 +228,14 @@
 				A3A05F7218F710DD00B3091F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A05F8718F7120200B3091F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F5C18F710DD00B3091F /* Main.storyboard */,
+			);
+			name = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +285,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Jetpac;
 				TargetAttributes = {
+					A3A05F4618F710DD00B3091F = {
+						DevelopmentTeam = 5VR4ETLHVP;
+					};
 					A3A05F6718F710DD00B3091F = {
 						TestTargetID = A3A05F4618F710DD00B3091F;
 					};
@@ -228,9 +317,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A05FA118F712A200B3091F /* Icon-58.png in Resources */,
+				A3A05FA618F712A200B3091F /* Icon-152.png in Resources */,
+				A3A05FAE18F712A200B3091F /* squarePNG.png in Resources */,
+				A3A05FAC18F712A200B3091F /* Nav_Share_Saved@2x.png in Resources */,
+				A3A05FA518F712A200B3091F /* Icon-120.png in Resources */,
+				A3A05FA218F712A200B3091F /* Icon-76.png in Resources */,
+				A3A05FAB18F712A200B3091F /* launch@2x.png in Resources */,
+				A3A05FAA18F712A200B3091F /* launch@1x.png in Resources */,
+				A3A05FA318F712A200B3091F /* Icon-80.png in Resources */,
+				A3A05FA418F712A200B3091F /* Icon-114.png in Resources */,
+				A3A05FAD18F712A200B3091F /* Nav_Share@2x.png in Resources */,
 				A3A05F6318F710DD00B3091F /* Images.xcassets in Resources */,
+				A3A05FB018F712A200B3091F /* videoBtn.png in Resources */,
+				A3A05FA918F712A200B3091F /* jetpac.ntwk in Resources */,
+				A3A05FA718F712A200B3091F /* iTunesArtwork.png in Resources */,
 				A3A05F5518F710DD00B3091F /* InfoPlist.strings in Resources */,
+				A3A05FA818F712A200B3091F /* iTunesArtwork@2x.png in Resources */,
+				A3A05FA018F712A200B3091F /* Icon-57.png in Resources */,
 				A3A05F5E18F710DD00B3091F /* Main.storyboard in Resources */,
+				A3A05FAF18F712A200B3091F /* stillBtn.png in Resources */,
+				A3A05F9E18F712A200B3091F /* Icon-29.png in Resources */,
+				A3A05F9F18F712A200B3091F /* Icon-40.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A05F9D18F712A200B3091F /* CustomButton.m in Sources */,
 				A3A05F6118F710DD00B3091F /* ViewController.m in Sources */,
 				A3A05F5B18F710DD00B3091F /* AppDelegate.m in Sources */,
-				A3A05F5718F710DD00B3091F /* main.m in Sources */,
+				A3A05F5718F710DD00B3091F /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +485,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/df/Developer/DeepBeliefSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Prefix.pch";
 				INFOPLIST_FILE = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +504,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/df/Developer/DeepBeliefSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Prefix.pch";
 				INFOPLIST_FILE = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
