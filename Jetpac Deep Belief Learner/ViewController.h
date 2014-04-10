@@ -59,8 +59,6 @@
 @property (readonly)    SystemSoundID   soundFileObject;
 @property (retain, nonatomic) NSDate *lastFrameTime;
 
-@property (weak, nonatomic) IBOutlet UIButton *saveImage;
-
 - (IBAction)takePicture:(id)sender;
 - (IBAction)switchCameras:(id)sender;
 - (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender;

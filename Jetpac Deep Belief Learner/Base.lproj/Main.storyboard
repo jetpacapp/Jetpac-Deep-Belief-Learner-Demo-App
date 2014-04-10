@@ -20,28 +20,18 @@
                                     <outletCollection property="gestureRecognizers" destination="jPz-G0-g2x" appends="YES" id="Iog-dc-gty"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARNER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TvK-Xe-mXW">
-                                <rect key="frame" x="0.0" y="10" width="320" height="40"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Belief" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TvK-Xe-mXW">
+                                <rect key="frame" x="0.0" y="-4" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.60897640306122447" green="0.60897640306122447" blue="0.60897640306122447" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yyt-PW-5fH">
-                                <rect key="frame" x="262" y="499" width="48" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="-10" minY="-10" maxX="-10" maxY="-10"/>
-                                <state key="normal" backgroundImage="Nav_Share.png"/>
-                                <connections>
-                                    <action selector="savePicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qST-V3-sKq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13046930360685946" green="0.12974042481575968" blue="0.13119818239795922" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="previewView" destination="eB0-cj-Dz2" id="C4p-QG-kgC"/>
-                        <outlet property="saveImage" destination="yyt-PW-5fH" id="k0A-Id-YJ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -49,9 +39,6 @@
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="Nav_Share.png" width="48" height="60"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -133,7 +133,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
 	NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
 	faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
     
-    [self.saveImage setHidden:YES];
+//    [self.saveImage setHidden:YES];
     
 //    [self.view bringSubviewToFront:introView];
     
@@ -156,10 +156,10 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
         //        [previewView setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:17.0/255.0 blue:17.0/255.0 alpha:1.0]];
         //        [introView setFrame:viewFrame];
         
-        CGRect frame = self.saveImage.frame;
-        frame.origin.x = frame.origin.x; // new x coordinate
-        frame.origin.y = self.view.frame.size.height - 70.0; // new y coordinate
-        [self.saveImage setFrame:frame];
+//        CGRect frame = self.saveImage.frame;
+//        frame.origin.x = frame.origin.x; // new x coordinate
+//        frame.origin.y = self.view.frame.size.height - 70.0; // new y coordinate
+//        [self.saveImage setFrame:frame];
         
         [self.view setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:17.0/255.0 blue:17.0/255.0 alpha:1.0]];
     } else {
@@ -198,7 +198,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
 //    [introView setHidden:YES];
 //    [introView removeFromSuperview];
     
-    [self.saveImage setHidden:YES];
+//    [self.saveImage setHidden:YES];
     
     [self createButton];
     
@@ -267,7 +267,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     //    NSLog(@"did enter foreground notification");
     //    [actionButton.layer setBackgroundColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
     [actionButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
-    [self.saveImage setHidden:YES];
+//    [self.saveImage setHidden:YES];
     [session startRunning];
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:0.5] forState:UIControlStateHighlighted];
@@ -414,7 +414,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
 {
     actionButton = [CustomButton buttonWithType:UIButtonTypeCustom];
     [actionButton addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchUpInside];
-    [actionButton setTitle:@"Start Learning" forState:UIControlStateNormal];
+    [actionButton setTitle:@"Start Teaching" forState:UIControlStateNormal];
     
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:0.5] forState:UIControlStateHighlighted];
@@ -452,8 +452,9 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
 }
 
 - (void) setupInfoDisplay {
-    NSString* const font = @"Menlo-Regular";
-    const float fontSize = 20.0f;
+//    NSString* const font = @"Menlo-Regular";
+    NSString * const font = @"Helvetica-Neue-Medium";
+    const float fontSize = 16.0f;
     
     const float viewWidth = 320.0f;
     
@@ -465,7 +466,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     
     const float infoHeight = 150.0f;
     
-    const CGRect progressBackgroundBounds = CGRectMake(marginSizeX, marginTopY, (viewWidth - (marginSizeX * 2)), progressHeight);
+    const CGRect progressBackgroundBounds = CGRectMake(marginSizeX, 25.0 + marginTopY, (viewWidth - (marginSizeX * 2)), progressHeight);
     
     self.progressBackground = [CATextLayer layer];
     [self.progressBackground setBackgroundColor: [UIColor blackColor].CGColor];
@@ -475,7 +476,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     
     [[self.view layer] addSublayer: self.progressBackground];
     
-    const CGRect progressForegroundBounds = CGRectMake(marginSizeX, marginTopY, 0.0f, progressHeight);
+    const CGRect progressForegroundBounds = CGRectMake(marginSizeX, 25.0 + marginTopY, 0.0f, progressHeight);
     
     self.progressForeground = [CATextLayer layer];
     [self.progressForeground setBackgroundColor: [UIColor blueColor].CGColor];
@@ -485,10 +486,10 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     
     [[self.view layer] addSublayer: self.progressForeground];
     
-    const CGRect infoBackgroundBounds = CGRectMake(marginSizeX, (marginSizeY + progressHeight + marginSizeY), (viewWidth - (marginSizeX * 2)), infoHeight);
+    const CGRect infoBackgroundBounds = CGRectMake(marginSizeX, 35.0 + (marginSizeY + progressHeight + marginSizeY), (viewWidth - (marginSizeX * 2)), infoHeight);
     
     self.infoBackground = [CATextLayer layer];
-    [self.infoBackground setBackgroundColor: [UIColor blackColor].CGColor];
+    [self.infoBackground setBackgroundColor: [UIColor clearColor].CGColor];
     [self.infoBackground setOpacity:0.5f];
     [self.infoBackground setFrame: infoBackgroundBounds];
     self.infoBackground.cornerRadius = 5.0f;
@@ -505,6 +506,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     [self.infoForeground setWrapped: YES];
     [self.infoForeground setFont: (__bridge CFTypeRef)(font)];
     [self.infoForeground setFontSize: fontSize];
+    self.infoForeground.alignmentMode = kCAAlignmentCenter;
     self.infoForeground.contentsScale = [[UIScreen mainScreen] scale];
     
     [self.infoForeground setString: @""];
@@ -811,7 +813,7 @@ bail:
     [previewView addSubview:fakeView];
     
     [actionButton setHidden:YES];
-    [self.saveImage setHidden:YES];
+//    [self.saveImage setHidden:YES];
     
     [previewView bringSubviewToFront:gradientLayer];
     //    [gradientLayer setHidden:NO];
@@ -823,11 +825,11 @@ bail:
     
     UIImageWriteToSavedPhotosAlbum(tempScreenshot, self, @selector(writeImageCompletion:didFinishSavingWithError:contextInfo:), nil);
     
-    [self.saveImage setHidden:NO];
+//    [self.saveImage setHidden:NO];
     [actionButton setHidden:NO];
     [fakeView removeFromSuperview];
     
-    [self.saveImage setBackgroundImage:[UIImage imageNamed:@"Nav_Share_Saved@2x.png"] forState:UIControlStateNormal];
+//    [self.saveImage setBackgroundImage:[UIImage imageNamed:@"Nav_Share_Saved@2x.png"] forState:UIControlStateNormal];
 }
 
 - (void)writeImageCompletion:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
@@ -857,7 +859,7 @@ bail:
 {
     switch (predictionState) {
         case eWaiting: {
-            [sender setTitle: @"Learning" forState:UIControlStateNormal];
+            [sender setTitle: @"Teaching" forState:UIControlStateNormal];
             [self triggerNextState];
         } break;
             
@@ -866,7 +868,7 @@ bail:
         } break;
             
         case eNegativeWaiting: {
-            [sender setTitle: @"Learning" forState:UIControlStateNormal];
+            [sender setTitle: @"Teaching" forState:UIControlStateNormal];
             [self triggerNextState];
         } break;
             
@@ -1583,7 +1585,7 @@ bail:
         case ePredicting:
         {
             [self setInfo: @"You've taught the neural network to see! Now you should be able to scan around using the camera and detect the object's presence."];
-            [actionButton setTitle: @"Learn Again" forState:UIControlStateNormal];
+            [actionButton setTitle: @"Teach Again" forState:UIControlStateNormal];
         } break;
             
         default:
