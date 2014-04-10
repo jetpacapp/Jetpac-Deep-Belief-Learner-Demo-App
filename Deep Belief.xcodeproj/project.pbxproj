@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3A05F4B18F710DD00B3091F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4A18F710DD00B3091F /* Foundation.framework */; };
+		A3A05F4D18F710DD00B3091F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4C18F710DD00B3091F /* CoreGraphics.framework */; };
+		A3A05F4F18F710DD00B3091F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4E18F710DD00B3091F /* UIKit.framework */; };
+		A3A05F5518F710DD00B3091F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F5318F710DD00B3091F /* InfoPlist.strings */; };
+		A3A05F5718F710DD00B3091F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F5618F710DD00B3091F /* main.mm */; };
+		A3A05F5B18F710DD00B3091F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F5A18F710DD00B3091F /* AppDelegate.m */; };
+		A3A05F5E18F710DD00B3091F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F5C18F710DD00B3091F /* Main.storyboard */; };
+		A3A05F6118F710DD00B3091F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F6018F710DD00B3091F /* ViewController.m */; };
+		A3A05F6318F710DD00B3091F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F6218F710DD00B3091F /* Images.xcassets */; };
+		A3A05F6A18F710DD00B3091F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F6918F710DD00B3091F /* XCTest.framework */; };
+		A3A05F6B18F710DD00B3091F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4A18F710DD00B3091F /* Foundation.framework */; };
+		A3A05F6C18F710DD00B3091F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F4E18F710DD00B3091F /* UIKit.framework */; };
+		A3A05F7418F710DD00B3091F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F7218F710DD00B3091F /* InfoPlist.strings */; };
+		A3A05F7618F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F7518F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m */; };
+		A3A05F8018F7116700B3091F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */; };
+		A3A05F8218F7116E00B3091F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8118F7116E00B3091F /* Accelerate.framework */; };
+		A3A05F8418F7119A00B3091F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8318F7119A00B3091F /* QuartzCore.framework */; };
+		A3A05F8618F711AD00B3091F /* DeepBelief.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A05F8518F711AD00B3091F /* DeepBelief.framework */; };
+		A3A05F9D18F712A200B3091F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A05F8918F712A200B3091F /* CustomButton.m */; };
+		A3A05F9E18F712A200B3091F /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8A18F712A200B3091F /* Icon-29.png */; };
+		A3A05F9F18F712A200B3091F /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8B18F712A200B3091F /* Icon-40.png */; };
+		A3A05FA018F712A200B3091F /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8C18F712A200B3091F /* Icon-57.png */; };
+		A3A05FA118F712A200B3091F /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8D18F712A200B3091F /* Icon-58.png */; };
+		A3A05FA218F712A200B3091F /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8E18F712A200B3091F /* Icon-76.png */; };
+		A3A05FA318F712A200B3091F /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F8F18F712A200B3091F /* Icon-80.png */; };
+		A3A05FA418F712A200B3091F /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9018F712A200B3091F /* Icon-114.png */; };
+		A3A05FA518F712A200B3091F /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9118F712A200B3091F /* Icon-120.png */; };
+		A3A05FA618F712A200B3091F /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9218F712A200B3091F /* Icon-152.png */; };
+		A3A05FA718F712A200B3091F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9318F712A200B3091F /* iTunesArtwork.png */; };
+		A3A05FA818F712A200B3091F /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */; };
+		A3A05FA918F712A200B3091F /* jetpac.ntwk in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9518F712A200B3091F /* jetpac.ntwk */; };
+		A3A05FAA18F712A200B3091F /* launch@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9618F712A200B3091F /* launch@1x.png */; };
+		A3A05FAB18F712A200B3091F /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9718F712A200B3091F /* launch@2x.png */; };
+		A3A05FAC18F712A200B3091F /* Nav_Share_Saved@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */; };
+		A3A05FAD18F712A200B3091F /* Nav_Share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9918F712A200B3091F /* Nav_Share@2x.png */; };
+		A3A05FAE18F712A200B3091F /* squarePNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9A18F712A200B3091F /* squarePNG.png */; };
+		A3A05FAF18F712A200B3091F /* stillBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9B18F712A200B3091F /* stillBtn.png */; };
+		A3A05FB018F712A200B3091F /* videoBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A05F9C18F712A200B3091F /* videoBtn.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3A05F6D18F710DD00B3091F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3A05F3F18F710DD00B3091F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3A05F4618F710DD00B3091F;
+			remoteInfo = "Jetpac Deep Belief Learner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3A05F4718F710DD00B3091F /* Deep Belief.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Belief.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A05F4A18F710DD00B3091F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3A05F4C18F710DD00B3091F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3A05F4E18F710DD00B3091F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3A05F5218F710DD00B3091F /* Deep Belief-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deep Belief-Info.plist"; sourceTree = "<group>"; };
+		A3A05F5418F710DD00B3091F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3A05F5618F710DD00B3091F /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		A3A05F5818F710DD00B3091F /* Deep Belief-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deep Belief-Prefix.pch"; sourceTree = "<group>"; };
+		A3A05F5918F710DD00B3091F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A3A05F5A18F710DD00B3091F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3A05F5D18F710DD00B3091F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3A05F5F18F710DD00B3091F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A3A05F6018F710DD00B3091F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A3A05F6218F710DD00B3091F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3A05F6818F710DD00B3091F /* Deep BeliefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deep BeliefTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A05F6918F710DD00B3091F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A3A05F7118F710DD00B3091F /* Deep BeliefTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deep BeliefTests-Info.plist"; sourceTree = "<group>"; };
+		A3A05F7318F710DD00B3091F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3A05F7518F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jetpac_Deep_Belief_LearnerTests.m; sourceTree = "<group>"; };
+		A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A3A05F8118F7116E00B3091F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A3A05F8318F7119A00B3091F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3A05F8518F711AD00B3091F /* DeepBelief.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeepBelief.framework; path = ../DeepBeliefSDK/DeepBelief.framework; sourceTree = "<group>"; };
+		A3A05F8818F712A200B3091F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		A3A05F8918F712A200B3091F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		A3A05F8A18F712A200B3091F /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
+		A3A05F8B18F712A200B3091F /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		A3A05F8C18F712A200B3091F /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		A3A05F8D18F712A200B3091F /* Icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58.png"; sourceTree = "<group>"; };
+		A3A05F8E18F712A200B3091F /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		A3A05F8F18F712A200B3091F /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
+		A3A05F9018F712A200B3091F /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		A3A05F9118F712A200B3091F /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		A3A05F9218F712A200B3091F /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = "<group>"; };
+		A3A05F9318F712A200B3091F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		A3A05F9518F712A200B3091F /* jetpac.ntwk */ = {isa = PBXFileReference; lastKnownFileType = file; path = jetpac.ntwk; sourceTree = "<group>"; };
+		A3A05F9618F712A200B3091F /* launch@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@1x.png"; sourceTree = "<group>"; };
+		A3A05F9718F712A200B3091F /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@2x.png"; sourceTree = "<group>"; };
+		A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_Share_Saved@2x.png"; sourceTree = "<group>"; };
+		A3A05F9918F712A200B3091F /* Nav_Share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_Share@2x.png"; sourceTree = "<group>"; };
+		A3A05F9A18F712A200B3091F /* squarePNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarePNG.png; sourceTree = "<group>"; };
+		A3A05F9B18F712A200B3091F /* stillBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stillBtn.png; sourceTree = "<group>"; };
+		A3A05F9C18F712A200B3091F /* videoBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoBtn.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3A05F4418F710DD00B3091F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05F8218F7116E00B3091F /* Accelerate.framework in Frameworks */,
+				A3A05F8018F7116700B3091F /* AssetsLibrary.framework in Frameworks */,
+				A3A05F4D18F710DD00B3091F /* CoreGraphics.framework in Frameworks */,
+				A3A05F8618F711AD00B3091F /* DeepBelief.framework in Frameworks */,
+				A3A05F4B18F710DD00B3091F /* Foundation.framework in Frameworks */,
+				A3A05F8418F7119A00B3091F /* QuartzCore.framework in Frameworks */,
+				A3A05F4F18F710DD00B3091F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A05F6518F710DD00B3091F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05F6A18F710DD00B3091F /* XCTest.framework in Frameworks */,
+				A3A05F6C18F710DD00B3091F /* UIKit.framework in Frameworks */,
+				A3A05F6B18F710DD00B3091F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3A05F3E18F710DD00B3091F = {
+			isa = PBXGroup;
+			children = (
+				A3A05F5018F710DD00B3091F /* Jetpac Deep Belief Learner */,
+				A3A05F6F18F710DD00B3091F /* Jetpac Deep Belief LearnerTests */,
+				A3A05F4918F710DD00B3091F /* Frameworks */,
+				A3A05F4818F710DD00B3091F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3A05F4818F710DD00B3091F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F4718F710DD00B3091F /* Deep Belief.app */,
+				A3A05F6818F710DD00B3091F /* Deep BeliefTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3A05F4918F710DD00B3091F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F8518F711AD00B3091F /* DeepBelief.framework */,
+				A3A05F8318F7119A00B3091F /* QuartzCore.framework */,
+				A3A05F8118F7116E00B3091F /* Accelerate.framework */,
+				A3A05F7F18F7116700B3091F /* AssetsLibrary.framework */,
+				A3A05F4A18F710DD00B3091F /* Foundation.framework */,
+				A3A05F4C18F710DD00B3091F /* CoreGraphics.framework */,
+				A3A05F4E18F710DD00B3091F /* UIKit.framework */,
+				A3A05F6918F710DD00B3091F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3A05F5018F710DD00B3091F /* Jetpac Deep Belief Learner */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F8718F7120200B3091F /* en.lproj */,
+				A3A05F5918F710DD00B3091F /* AppDelegate.h */,
+				A3A05F5A18F710DD00B3091F /* AppDelegate.m */,
+				A3A05F8818F712A200B3091F /* CustomButton.h */,
+				A3A05F8918F712A200B3091F /* CustomButton.m */,
+				A3A05F5F18F710DD00B3091F /* ViewController.h */,
+				A3A05F6018F710DD00B3091F /* ViewController.m */,
+				A3A05F6218F710DD00B3091F /* Images.xcassets */,
+				A3A05F5118F710DD00B3091F /* Supporting Files */,
+			);
+			path = "Jetpac Deep Belief Learner";
+			sourceTree = "<group>";
+		};
+		A3A05F5118F710DD00B3091F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F8A18F712A200B3091F /* Icon-29.png */,
+				A3A05F8B18F712A200B3091F /* Icon-40.png */,
+				A3A05F8C18F712A200B3091F /* Icon-57.png */,
+				A3A05F8D18F712A200B3091F /* Icon-58.png */,
+				A3A05F8E18F712A200B3091F /* Icon-76.png */,
+				A3A05F8F18F712A200B3091F /* Icon-80.png */,
+				A3A05F9018F712A200B3091F /* Icon-114.png */,
+				A3A05F9118F712A200B3091F /* Icon-120.png */,
+				A3A05F9218F712A200B3091F /* Icon-152.png */,
+				A3A05F9318F712A200B3091F /* iTunesArtwork.png */,
+				A3A05F9418F712A200B3091F /* iTunesArtwork@2x.png */,
+				A3A05F9518F712A200B3091F /* jetpac.ntwk */,
+				A3A05F9618F712A200B3091F /* launch@1x.png */,
+				A3A05F9718F712A200B3091F /* launch@2x.png */,
+				A3A05F9818F712A200B3091F /* Nav_Share_Saved@2x.png */,
+				A3A05F9918F712A200B3091F /* Nav_Share@2x.png */,
+				A3A05F9A18F712A200B3091F /* squarePNG.png */,
+				A3A05F9B18F712A200B3091F /* stillBtn.png */,
+				A3A05F9C18F712A200B3091F /* videoBtn.png */,
+				A3A05F5218F710DD00B3091F /* Deep Belief-Info.plist */,
+				A3A05F5318F710DD00B3091F /* InfoPlist.strings */,
+				A3A05F5618F710DD00B3091F /* main.mm */,
+				A3A05F5818F710DD00B3091F /* Deep Belief-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A05F6F18F710DD00B3091F /* Jetpac Deep Belief LearnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F7518F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m */,
+				A3A05F7018F710DD00B3091F /* Supporting Files */,
+			);
+			path = "Jetpac Deep Belief LearnerTests";
+			sourceTree = "<group>";
+		};
+		A3A05F7018F710DD00B3091F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F7118F710DD00B3091F /* Deep BeliefTests-Info.plist */,
+				A3A05F7218F710DD00B3091F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A05F8718F7120200B3091F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A3A05F5C18F710DD00B3091F /* Main.storyboard */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3A05F4618F710DD00B3091F /* Deep Belief */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3A05F7918F710DD00B3091F /* Build configuration list for PBXNativeTarget "Deep Belief" */;
+			buildPhases = (
+				A3A05F4318F710DD00B3091F /* Sources */,
+				A3A05F4418F710DD00B3091F /* Frameworks */,
+				A3A05F4518F710DD00B3091F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deep Belief";
+			productName = "Jetpac Deep Belief Learner";
+			productReference = A3A05F4718F710DD00B3091F /* Deep Belief.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3A05F6718F710DD00B3091F /* Deep BeliefTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3A05F7C18F710DD00B3091F /* Build configuration list for PBXNativeTarget "Deep BeliefTests" */;
+			buildPhases = (
+				A3A05F6418F710DD00B3091F /* Sources */,
+				A3A05F6518F710DD00B3091F /* Frameworks */,
+				A3A05F6618F710DD00B3091F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3A05F6E18F710DD00B3091F /* PBXTargetDependency */,
+			);
+			name = "Deep BeliefTests";
+			productName = "Jetpac Deep Belief LearnerTests";
+			productReference = A3A05F6818F710DD00B3091F /* Deep BeliefTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3A05F3F18F710DD00B3091F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Jetpac;
+				TargetAttributes = {
+					A3A05F4618F710DD00B3091F = {
+						DevelopmentTeam = 5VR4ETLHVP;
+					};
+					A3A05F6718F710DD00B3091F = {
+						TestTargetID = A3A05F4618F710DD00B3091F;
+					};
+				};
+			};
+			buildConfigurationList = A3A05F4218F710DD00B3091F /* Build configuration list for PBXProject "Deep Belief" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3A05F3E18F710DD00B3091F;
+			productRefGroup = A3A05F4818F710DD00B3091F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3A05F4618F710DD00B3091F /* Deep Belief */,
+				A3A05F6718F710DD00B3091F /* Deep BeliefTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3A05F4518F710DD00B3091F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05FA118F712A200B3091F /* Icon-58.png in Resources */,
+				A3A05FA618F712A200B3091F /* Icon-152.png in Resources */,
+				A3A05FAE18F712A200B3091F /* squarePNG.png in Resources */,
+				A3A05FAC18F712A200B3091F /* Nav_Share_Saved@2x.png in Resources */,
+				A3A05FA518F712A200B3091F /* Icon-120.png in Resources */,
+				A3A05FA218F712A200B3091F /* Icon-76.png in Resources */,
+				A3A05FAB18F712A200B3091F /* launch@2x.png in Resources */,
+				A3A05FAA18F712A200B3091F /* launch@1x.png in Resources */,
+				A3A05FA318F712A200B3091F /* Icon-80.png in Resources */,
+				A3A05FA418F712A200B3091F /* Icon-114.png in Resources */,
+				A3A05FAD18F712A200B3091F /* Nav_Share@2x.png in Resources */,
+				A3A05F6318F710DD00B3091F /* Images.xcassets in Resources */,
+				A3A05FB018F712A200B3091F /* videoBtn.png in Resources */,
+				A3A05FA918F712A200B3091F /* jetpac.ntwk in Resources */,
+				A3A05FA718F712A200B3091F /* iTunesArtwork.png in Resources */,
+				A3A05F5518F710DD00B3091F /* InfoPlist.strings in Resources */,
+				A3A05FA818F712A200B3091F /* iTunesArtwork@2x.png in Resources */,
+				A3A05FA018F712A200B3091F /* Icon-57.png in Resources */,
+				A3A05F5E18F710DD00B3091F /* Main.storyboard in Resources */,
+				A3A05FAF18F712A200B3091F /* stillBtn.png in Resources */,
+				A3A05F9E18F712A200B3091F /* Icon-29.png in Resources */,
+				A3A05F9F18F712A200B3091F /* Icon-40.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A05F6618F710DD00B3091F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05F7418F710DD00B3091F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3A05F4318F710DD00B3091F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05F9D18F712A200B3091F /* CustomButton.m in Sources */,
+				A3A05F6118F710DD00B3091F /* ViewController.m in Sources */,
+				A3A05F5B18F710DD00B3091F /* AppDelegate.m in Sources */,
+				A3A05F5718F710DD00B3091F /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A05F6418F710DD00B3091F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A05F7618F710DD00B3091F /* Jetpac_Deep_Belief_LearnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3A05F6E18F710DD00B3091F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3A05F4618F710DD00B3091F /* Deep Belief */;
+			targetProxy = A3A05F6D18F710DD00B3091F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3A05F5318F710DD00B3091F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3A05F5418F710DD00B3091F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3A05F5C18F710DD00B3091F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3A05F5D18F710DD00B3091F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3A05F7218F710DD00B3091F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3A05F7318F710DD00B3091F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3A05F7718F710DD00B3091F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A3A05F7818F710DD00B3091F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3A05F7A18F710DD00B3091F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/df/Developer/DeepBeliefSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Deep Belief-Prefix.pch";
+				INFOPLIST_FILE = "Jetpac Deep Belief Learner/Deep Belief-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Deep Belief";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3A05F7B18F710DD00B3091F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/df/Developer/DeepBeliefSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Deep Belief-Prefix.pch";
+				INFOPLIST_FILE = "Jetpac Deep Belief Learner/Deep Belief-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Deep Belief";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3A05F7D18F710DD00B3091F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jetpac Deep Belief Learner.app/Jetpac Deep Belief Learner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Jetpac Deep Belief LearnerTests/Deep BeliefTests-Info.plist";
+				PRODUCT_NAME = "Deep BeliefTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A3A05F7E18F710DD00B3091F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jetpac Deep Belief Learner.app/Jetpac Deep Belief Learner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jetpac Deep Belief Learner/Jetpac Deep Belief Learner-Prefix.pch";
+				INFOPLIST_FILE = "Jetpac Deep Belief LearnerTests/Deep BeliefTests-Info.plist";
+				PRODUCT_NAME = "Deep BeliefTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3A05F4218F710DD00B3091F /* Build configuration list for PBXProject "Deep Belief" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A05F7718F710DD00B3091F /* Debug */,
+				A3A05F7818F710DD00B3091F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3A05F7918F710DD00B3091F /* Build configuration list for PBXNativeTarget "Deep Belief" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A05F7A18F710DD00B3091F /* Debug */,
+				A3A05F7B18F710DD00B3091F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3A05F7C18F710DD00B3091F /* Build configuration list for PBXNativeTarget "Deep BeliefTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A05F7D18F710DD00B3091F /* Debug */,
+				A3A05F7E18F710DD00B3091F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3A05F3F18F710DD00B3091F /* Project object */;
+}
