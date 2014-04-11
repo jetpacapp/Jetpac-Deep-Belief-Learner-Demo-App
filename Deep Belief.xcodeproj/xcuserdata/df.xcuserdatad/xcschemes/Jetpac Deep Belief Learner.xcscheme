@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A3A05F4618F710DD00B3091F"
-               BuildableName = "Jetpac Deep Belief Learner.app"
+               BuildableName = "Deep Belief.app"
                BlueprintName = "Deep Belief"
                ReferencedContainer = "container:Deep Belief.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A3A05F6718F710DD00B3091F"
-               BuildableName = "Jetpac Deep Belief LearnerTests.xctest"
+               BuildableName = "Deep BeliefTests.xctest"
                BlueprintName = "Deep BeliefTests"
                ReferencedContainer = "container:Deep Belief.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3A05F4618F710DD00B3091F"
-            BuildableName = "Jetpac Deep Belief Learner.app"
+            BuildableName = "Deep Belief.app"
             BlueprintName = "Deep Belief"
             ReferencedContainer = "container:Deep Belief.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3A05F4618F710DD00B3091F"
-            BuildableName = "Jetpac Deep Belief Learner.app"
+            BuildableName = "Deep Belief.app"
             BlueprintName = "Deep Belief"
             ReferencedContainer = "container:Deep Belief.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3A05F4618F710DD00B3091F"
-            BuildableName = "Jetpac Deep Belief Learner.app"
+            BuildableName = "Deep Belief.app"
             BlueprintName = "Deep Belief"
             ReferencedContainer = "container:Deep Belief.xcodeproj">
          </BuildableReference>

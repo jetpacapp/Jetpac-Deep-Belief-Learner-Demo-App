@@ -217,7 +217,6 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     [gradientLayer.layer insertSublayer:gradient atIndex:0];
     [previewView addSubview:gradientLayer];
     [previewView bringSubviewToFront:gradientLayer];
-    //    [gradientLayer setHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -267,14 +266,12 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     //    NSLog(@"did enter foreground notification");
     //    [actionButton.layer setBackgroundColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
     [actionButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
-//    [self.saveImage setHidden:YES];
-    [session startRunning];
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:0.5] forState:UIControlStateHighlighted];
     [actionButton.layer setBorderColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
-    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateNormal];
-    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateHighlighted];
-    [actionButton setTitle: @"Snap" forState:UIControlStateNormal];
+    [actionButton setTitle: @"Start Teaching" forState:UIControlStateNormal];
+
+    [session startRunning];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -425,8 +422,8 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     
     //    [actionButton.layer setBackgroundColor:[UIColor redColor].CGColor];
     //    [actionButton.layer setBackgroundColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
-//    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateNormal];
-//    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateHighlighted];
+    //    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateNormal];
+    //    [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateHighlighted];
     [actionButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
     
     [actionButton.layer setBorderWidth:3];
@@ -437,22 +434,22 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     [self.view addSubview:actionButton];
 }
 
-- (void) setupLearning {
-    
+- (void)setupLearning
+{
     negativePredictionsCount = 0;
-    
+
     trainer = NULL;
     predictor = NULL;
     predictionState = eWaiting;
-    
+
     lastInfo = NULL;
-    
+
     [self setupInfoDisplay];
     [self setupSound];
 }
 
-- (void) setupInfoDisplay {
-//    NSString* const font = @"Menlo-Regular";
+- (void)setupInfoDisplay
+{
     NSString * const font = @"Helvetica-Neue-Medium";
     const float fontSize = 16.0f;
     
@@ -514,7 +511,8 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     [[self.view layer] addSublayer: self.infoForeground];
 }
 
-- (void) setupSound {
+- (void)setupSound
+{
     // Create the URL for the source audio file. The URLForResource:withExtension: method is
     //    new in iOS 4.0.
     NSURL *soundUrl   = [[NSBundle mainBundle] URLForResource: @"32093__jbum__jsyd-ping"
@@ -803,58 +801,6 @@ bail:
     [self runCNNOnFrame:pixelBuffer];
 }
 
-- (IBAction)savePicture:(id)sender
-{
-    //    NSLog(@"hello!");
-    
-    UIView *fakeView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, previewView.bounds.size.width, previewView.bounds.size.height)];
-    UIImageView * screenshotView = [[UIImageView alloc] initWithImage:screenshot];
-    [fakeView addSubview:screenshotView];
-    [previewView addSubview:fakeView];
-    
-    [actionButton setHidden:YES];
-//    [self.saveImage setHidden:YES];
-    
-    [previewView bringSubviewToFront:gradientLayer];
-    //    [gradientLayer setHidden:NO];
-    
-    UIGraphicsBeginImageContext(self.view.bounds.size);
-    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *tempScreenshot = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    UIImageWriteToSavedPhotosAlbum(tempScreenshot, self, @selector(writeImageCompletion:didFinishSavingWithError:contextInfo:), nil);
-    
-//    [self.saveImage setHidden:NO];
-    [actionButton setHidden:NO];
-    [fakeView removeFromSuperview];
-    
-//    [self.saveImage setBackgroundImage:[UIImage imageNamed:@"Nav_Share_Saved@2x.png"] forState:UIControlStateNormal];
-}
-
-- (void)writeImageCompletion:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved to photos"
-                                                    message:@""
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    
-    if (error)
-    {
-        //        NSLog(@"here - error");
-        
-        //        [self displayErrorOnMainQueue:error withMessage:@"Save picture failed"];
-        [alert setTitle:@"Image Save Failed"];
-        [alert setMessage:@"Something went wrong saving the image. Check the app permissions."];
-    }
-    else
-    {
-        //        NSLog(@"here - worked");
-    }
-    [alert show];
-}
-
 - (IBAction)takePicture:(id)sender
 {
     switch (predictionState) {
@@ -885,121 +831,6 @@ bail:
         } break;
     }
 }
-
-//- (IBAction)takePicture:(id)sender
-//{
-//    if ([session isRunning])
-//    {
-//        [actionButton.layer setBackgroundColor:[UIColor redColor].CGColor];
-//        BOOL *hideSaveButton = NO;
-//        // Find out the current orientation and tell the still image output.
-//        AVCaptureConnection *stillImageConnection = [stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
-//        UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
-//        AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
-//        [stillImageConnection setVideoOrientation:avcaptureOrientation];
-//        [stillImageConnection setVideoScaleAndCropFactor:effectiveScale];
-//        
-//        // set the appropriate pixel format / image type output setting depending on if we'll need an uncompressed image for
-//        // the possiblity of drawing the red square over top or if we're just writing a jpeg to the camera roll which is the trival case
-//        [stillImageOutput setOutputSettings:[NSDictionary dictionaryWithObject:AVVideoCodecJPEG forKey:AVVideoCodecKey]];
-//        
-//        [stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection
-//                                                      completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-//                                                          if (error)
-//                                                          {
-//                                                              //                                                              [self displayErrorOnMainQueue:error withMessage:@"Take picture failed"];
-//                                                              __block hideSaveButton = YES;
-//                                                          }
-//                                                          else
-//                                                          {
-//                                                              
-//                                                              // trivial simple JPEG case
-//                                                              NSData *jpegData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-//                                                              
-//                                                              screenshot = [UIImage imageWithData:jpegData];
-//                                                              
-//                                                              //                                                              CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, imageDataSampleBuffer, kCMAttachmentMode_ShouldPropagate);
-//                                                              //                                                              ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-//                                                              //                                                              [library writeImageDataToSavedPhotosAlbum:jpegData metadata:(__bridge id)attachments completionBlock:^(NSURL *assetURL, NSError *error) {
-//                                                              //                                                                      if (error)
-//                                                              //                                                                      {
-//                                                              //                                                                          [self displayErrorOnMainQueue:error withMessage:@"Save to camera roll failed"];
-//                                                              //                                                                      }
-//                                                              //                                                              }];
-//                                                              //
-//                                                              //                                                              if (attachments)
-//                                                              //                                                              {
-//                                                              //                                                                  CFRelease(attachments);
-//                                                              //                                                              }
-//                                                          }
-//                                                      }
-//         ];
-//        
-//        
-//        [session stopRunning];
-//        [actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//        [actionButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.5] forState:UIControlStateHighlighted];
-//        [actionButton.layer setBorderColor:[UIColor whiteColor].CGColor];
-//        [actionButton setBackgroundImage:[UIImage imageNamed:@"videoBtn.png"] forState:UIControlStateNormal];
-//        [actionButton setBackgroundImage:[UIImage imageNamed:@"videoBtn.png"] forState:UIControlStateHighlighted];
-//        [sender setTitle: @"Back" forState:UIControlStateNormal];
-//        
-//        flashView = [[UIView alloc] initWithFrame:[previewView frame]];
-//        [flashView setBackgroundColor:[UIColor whiteColor]];
-//        [flashView setAlpha:0.f];
-//        [[[self view] window] addSubview:flashView];
-//        
-//        [UIView animateWithDuration:.2f
-//                         animations:^{
-//                             [flashView setAlpha:1.f];
-//                         }
-//                         completion:^(BOOL finished){
-//                             [UIView animateWithDuration:.2f
-//                                              animations:^{
-//                                                  [flashView setAlpha:0.f];
-//                                              }
-//                                              completion:^(BOOL finished){
-//                                                  [flashView removeFromSuperview];
-//                                                  flashView = nil;
-//                                              }
-//                              ];
-//                         }
-//         ];
-//        [self.saveImage setHidden:hideSaveButton];
-//        [self.saveImage setBackgroundImage:[UIImage imageNamed:@"Nav_Share@2x.png"] forState:UIControlStateNormal];
-//    }
-//    else
-//    {
-//        //        [actionButton.layer setBackgroundColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
-//        [actionButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
-//        [self.saveImage setHidden:YES];
-//        [session startRunning];
-//        [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-//        [actionButton setTitleColor:[UIColor colorWithRed:137.0/255.0 green:137.0/255.0 blue:137.0/255.0 alpha:0.5] forState:UIControlStateHighlighted];
-//        [actionButton.layer setBorderColor:[UIColor colorWithRed:92.0/255.0 green:92.0/255.0 blue:92.0/255.0 alpha:1.0].CGColor];
-//        [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateNormal];
-//        [actionButton setBackgroundImage:[UIImage imageNamed:@"stillBtn.png"] forState:UIControlStateHighlighted];
-//        [sender setTitle: @"Snap" forState:UIControlStateNormal];
-//    }
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - (CGImageRef)newSquareOverlayedImageForFeatures:(NSArray *)features
                                        inCGImage:(CGImageRef)backgroundImage
@@ -1220,42 +1051,6 @@ bail:
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         [self handleNetworkPredictions: predictions withLength: predictionsLength];
     });
-    
-//    NSMutableDictionary* newValues = [NSMutableDictionary dictionary];
-//    for (int index = 0; index < predictionsLength; index += 1)
-//    {
-//        const float predictionValue = predictions[index];
-//        if (predictionValue > 0.05f)
-//        {
-//            char* label = predictionsLabels[index % predictionsLabelsLength];
-//            NSString* labelObject = [NSString stringWithCString: label];
-//            NSNumber* valueObject = [NSNumber numberWithFloat: predictionValue];
-//            [newValues setObject: valueObject forKey: labelObject];
-//        }
-//    }
-//    
-//    if ([newValues count] == 0)
-//    {
-//        const float predictionValue = 0.0f;
-//        char* label = [@"" UTF8String];
-//        NSString* labelObject = [NSString stringWithCString: label];
-//        NSNumber* valueObject = [NSNumber numberWithFloat: predictionValue];
-//        [newValues setObject: valueObject forKey: labelObject];
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^(void) {
-//            if ([introView isHidden])
-//            {
-//                [self setEmptyPredictionValue: newValues];
-//            }
-//        });
-//    } else {
-//        dispatch_async(dispatch_get_main_queue(), ^(void) {
-//            if ([introView isHidden])
-//            {
-//                [self setPredictionValues: newValues];
-//            }
-//        });
-//    }
 }
 
 - (void)setEmptyPredictionValue: (NSDictionary *)newValues
@@ -1426,7 +1221,7 @@ bail:
     }
 }
 
-- (void) setPredictionText: (NSString*) text withDuration: (float) duration
+- (void)setPredictionText: (NSString*) text withDuration: (float) duration
 {
     if (duration > 0.0)
     {
@@ -1457,7 +1252,7 @@ bail:
         {
             [self startPositiveLearning];
         } break;
-
+            
         case ePositiveLearning:
         {
             [self startNegativeWaiting];
@@ -1522,6 +1317,7 @@ bail:
         case ePredicting:
         {
             const float predictionValue = jpcnn_predict(predictor, predictions, predictionsLength);
+            NSLog(@"here1");
             [self setProgress: predictionValue];
             const float frameDuration = - [self.lastFrameTime timeIntervalSinceNow];
             self.lastFrameTime = [NSDate date];
@@ -1541,7 +1337,7 @@ bail:
     [self updateInfoDisplay];
 }
 
-- (void) setProgress: (float) amount
+- (void)setProgress: (float) amount
 {
     const CGRect progressBackgroundBounds = [self.progressBackground frame];
     
@@ -1560,25 +1356,29 @@ bail:
         case eWaiting:
         {
             [self setInfo: @"When you're ready to teach me, press the button at the bottom and point your phone at the thing you want to recognize."];
+            NSLog(@"here2");
             [self setProgress: 0.0f];
         } break;
             
         case ePositiveLearning:
         {
             [self setInfo: @"Move around the thing you want to recognize, keeping the phone pointed at it, to capture different angles."];
+            NSLog(@"here3");
             [self setProgress: (positivePredictionsCount / (float)kPositivePredictionTotal)];
         } break;
             
         case eNegativeWaiting:
         {
             [self setInfo: @"Now I need to see examples of things that aren't the object you're looking for. Press the button when you're ready."];
+            NSLog(@"here4");
             [self setProgress: 0.0f];
-            [actionButton setTitle: @"Continue Learning" forState:UIControlStateNormal];
+            [actionButton setTitle: @"Continue Teaching" forState:UIControlStateNormal];
         } break;
             
         case eNegativeLearning:
         {
             [self setInfo: @"Now move around the room pointing your phone at lots of things that are not the object you want to recognize."];
+            NSLog(@"here5");
             [self setProgress: (negativePredictionsCount / (float)kNegativePredictionTotal)];
         } break;
             
@@ -1640,6 +1440,9 @@ bail:
         jpcnn_destroy_predictor(predictor);
     }
     predictor = jpcnn_create_predictor_from_trainer(trainer);
+//    fprintf(stderr, "------------- SVM File output - copy lines below ------------\n");
+//    jpcnn_print_predictor(predictor);
+//    fprintf(stderr, "------------- end of SVM File output - copy lines above ------------\n");
     predictionState = ePredicting;
     
     [self updateInfoDisplay];

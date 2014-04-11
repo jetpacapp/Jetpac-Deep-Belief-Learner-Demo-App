@@ -54,7 +54,6 @@
 @property (retain, nonatomic) CATextLayer *progressForeground;
 @property (retain, nonatomic) CATextLayer *infoBackground;
 @property (retain, nonatomic) CATextLayer *infoForeground;
-
 @property (readwrite)   CFURLRef        soundFileURLRef;
 @property (readonly)    SystemSoundID   soundFileObject;
 @property (retain, nonatomic) NSDate *lastFrameTime;
@@ -64,6 +63,6 @@
 - (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender;
 - (IBAction)toggleFaceDetection:(id)sender;
 
-- (void)writeImageCompletion:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
+//- (void)writeImageCompletion:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 
 @end
